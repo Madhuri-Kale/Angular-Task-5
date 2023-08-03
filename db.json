@@ -1,0 +1,103 @@
+{
+  "user": [
+    {
+      "name": "hodComp",
+      "email": "hodComp@gmail.com",
+      "contact": "123456",
+      "dept": "Computers",
+      "id": "hodComp",
+      "password": "hodComp",
+      "role": "hod",
+      "leaves": {
+        "totalLeaves": "20",
+        "approved": "0",
+        "rejected": "0",
+        "pending": "0"
+      },
+      "uuid": "ba843344-d1d8-40bf-b799-79eb7ec8ecbe"
+    },
+    {
+      "name": "hodCivil",
+      "email": "hodCivil@gmail.com",
+      "contact": "6578594947",
+      "dept": "Civil",
+      "id": "hodCivil",
+      "password": "hodCivil",
+      "role": "hod",
+      "leaves": {
+        "totalLeaves": "20",
+        "approved": "0",
+        "rejected": "0",
+        "pending": "0"
+      },
+      "uuid": "4ff1d814-9454-4bcf-b3d6-6fa03f999294"
+    },
+    {
+      "name": "Madhuri Kale",
+      "email": "madhuri@gmail.com",
+      "contact": "678765890",
+      "dept": "Computers",
+      "id": "madhuri",
+      "password": "madhuri",
+      "role": "staff",
+      "leaves": {
+        "totalLeaves": "20",
+        "approved": "0",
+        "rejected": "0",
+        "pending": "0"
+      },
+      "uuid": "0b91ddbc-6165-49eb-839d-515c0a208ef9"
+    },
+    {
+      "name": "John Doe",
+      "email": "john@gmail.com",
+      "contact": "1234567895",
+      "dept": "Civil",
+      "id": "john",
+      "password": "john",
+      "role": "staff",
+      "leaves": {
+        "totalLeaves": "20",
+        "approved": "0",
+        "rejected": "0",
+        "pending": "0"
+      },
+      "uuid": "fd5bb5c4-1589-4fc1-b5d0-b4440605cf99"
+    }
+  ],
+  "leaves": [
+    {
+      "staffId": "0b91ddbc-6165-49eb-839d-515c0a208ef9",
+      "name": "Madhuri Kale",
+      "dept": "Computers",
+      "fromdate": "2023-08-04T18:30:00.000Z",
+      "todate": "2023-08-04T18:30:00.000Z",
+      "days": "1",
+      "reason": "health",
+      "status": "Approved",
+      "id": 1
+    },
+    {
+      "staffId": "0b91ddbc-6165-49eb-839d-515c0a208ef9",
+      "name": "Madhuri Kale",
+      "dept": "Computers",
+      "fromdate": "2023-08-07T18:30:00.000Z",
+      "todate": "2023-08-08T18:30:00.000Z",
+      "days": "2",
+      "reason": "Family function",
+      "status": "Rejected",
+      "id": 2
+    },
+    {
+      "staffId": "fd5bb5c4-1589-4fc1-b5d0-b4440605cf99",
+      "name": "John Doe",
+      "dept": "Civil",
+      "fromdate": "2023-08-10T18:30:00.000Z",
+      "todate": "2023-08-10T18:30:00.000Z",
+      "days": "1",
+      "reason": "Going out of station",
+      "status": "pending",
+      "id": 3
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+<div class="col-12">
+  <h2 class="text-center m-0">HOD Dashboard</h2>
+  <h2 class="text-center text-uppercase">{{loggedHodDept}}</h2>
+</div>
+<div *ngFor="let data of leaveDataArr">
+    <mat-card>
+        <mat-card-content >
+            <mat-card-title>Staff Name: {{data.name}} </mat-card-title>
+            <mat-card-title>Leave Duration:</mat-card-title>
+            <mat-card-subtitle>{{data.fromdate|date}} - {{data.todate|date}} </mat-card-subtitle>
+          </mat-card-content>
+        <mat-card-content>
+          <mat-card-title>Number of days:</mat-card-title>
+          <mat-card-subtitle>{{data.days}}</mat-card-subtitle>
+        </mat-card-content>
+        <mat-card-content>
+            <mat-card-title>Reason:</mat-card-title>
+            <mat-card-subtitle>{{data.reason}}</mat-card-subtitle>
+        </mat-card-content>
+        <div *ngIf="data.status === 'pending'">
+          <mat-card-actions>
+            <button (click)="onClickApprove(data)" mat-raised-button color="primary">Approve</button>&nbsp;
+            <button (click)="onClickReject(data)" mat-raised-button color="warn">Reject</button>
+          </mat-card-actions>
+        </div>
+        <div *ngIf="data.status !== 'pending'">
+          <mat-card-actions>
+            <button [disabled]="true" mat-raised-button color="primary">{{data.status}}</button>
+          </mat-card-actions>
+        </div>
+        <mat-divider></mat-divider>
+    </mat-card>
+</div>

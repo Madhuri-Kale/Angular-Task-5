@@ -1,0 +1,54 @@
+<mat-card>
+    <mat-card-header>
+        <h1>Leave Details</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="leaveDetails" (ngSubmit)="applyLeave()">
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Employee Name</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Department</mat-label>
+                <select matNativeControl formControlName="dept">
+                    <option value="Electronics">Electronics</option>
+                    <option value="Computers">Computers</option>
+                    <option value="IT">IT</option>
+                    <option value="Civil">Civil</option>
+                </select>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>From</mat-label>
+                <input formControlName="fromdate" matInput [matDatepicker]="picker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>&nbsp;
+
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>To</mat-label>
+                <input formControlName="todate" matInput [matDatepicker]="picker1">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Number of days</mat-label>
+                <input matInput formControlName="days">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Reason</mat-label>
+                <textarea formControlName="reason" matInput></textarea>
+            </mat-form-field>
+
+            <div>
+                <button mat-raised-button color="primary">Submit</button>&nbsp;
+                <a routerLink="/view" mat-raised-button color="accent">View Leave</a>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

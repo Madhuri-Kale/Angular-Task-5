@@ -1,0 +1,54 @@
+<mat-card>
+    <mat-card-header>
+        <h1>User Registration</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="registerForm" (ngSubmit)="proceedregisteration()">
+            <div>
+                <mat-radio-group formControlName="role" aria-label="Role">
+                    <mat-radio-button value="hod">HOD</mat-radio-button>
+                    <mat-radio-button value="staff">Staff</mat-radio-button>
+                </mat-radio-group>
+            </div>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Contact</mat-label>
+                <input matInput formControlName="contact">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Department</mat-label>
+                <select matNativeControl formControlName="dept">
+                    <option value="Electronics">Electronics</option>
+                    <option value="Computers">Computers</option>
+                    <option value="IT">IT</option>
+                    <option value="Civil">Civil</option>
+                </select>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>User Name</mat-label>
+                <input matInput formControlName="id">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password">
+            </mat-form-field>
+            <div>
+                <button mat-raised-button color="primary">Submit</button>
+                <a routerLink="/login" mat-raised-button color="accent">Login (If already registered)</a>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

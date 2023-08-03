@@ -1,0 +1,28 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+mat-toolbar{
+    background-color: rgb(20, 34, 73);
+}
+mat-toolbar a{
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    font-size: 20px;
+}
+mat-toolbar span{
+    font-weight: 500;
+    color: #fff;
+    font-size: 28px;
+    padding: 20px;
+    cursor: pointer;
+}
