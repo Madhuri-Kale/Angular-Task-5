@@ -26,15 +26,17 @@ export class LoginComponent {
         this.userdata = res;
         console.log(this.userdata);
         if(this.userdata.password === this.loginForm.value.password){
-            localStorage.setItem('username', this.userdata.username)
+            localStorage.setItem('username', this.userdata.id)
             localStorage.setItem('name', this.userdata.name)
             localStorage.setItem('userrole', this.userdata.role)
             localStorage.setItem('dept', this.userdata.dept)
             localStorage.setItem('uuid', this.userdata.uuid)
             if(this.userdata.role === 'hod'){
               this.router.navigate(['/hod']);
-            }else{
+            }else if(this.userdata.role === 'staff'){
               this.router.navigate(['/staff']);
+            }else{
+              this.toastr.error('Invalid userrole');
             }
             
         }else{

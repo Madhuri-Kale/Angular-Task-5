@@ -63,6 +63,22 @@
         "pending": "0"
       },
       "uuid": "fd5bb5c4-1589-4fc1-b5d0-b4440605cf99"
+    },
+    {
+      "name": "user1",
+      "email": "user1@gmail.com",
+      "contact": "9878787878",
+      "dept": "Computers",
+      "id": "user1",
+      "password": "user1",
+      "role": "staff",
+      "leaves": {
+        "totalLeaves": "20",
+        "approved": "0",
+        "rejected": "0",
+        "pending": "0"
+      },
+      "uuid": "198a809b-2bcc-4636-97cf-17939c75bb76"
     }
   ],
   "leaves": [
@@ -96,8 +112,52 @@
       "todate": "2023-08-10T18:30:00.000Z",
       "days": "1",
       "reason": "Going out of station",
-      "status": "pending",
+      "status": "Rejected",
       "id": 3
+    },
+    {
+      "staffId": "0b91ddbc-6165-49eb-839d-515c0a208ef9",
+      "name": "Madhuri Kale",
+      "dept": "Computers",
+      "fromdate": "2023-08-06T18:30:00.000Z",
+      "todate": "2023-08-07T18:30:00.000Z",
+      "days": "2",
+      "reason": "Due to some family rituals",
+      "status": "pending",
+      "id": 4
+    },
+    {
+      "staffId": "fd5bb5c4-1589-4fc1-b5d0-b4440605cf99",
+      "name": "John Doe",
+      "dept": "Civil",
+      "fromdate": "2023-08-08T18:30:00.000Z",
+      "todate": "2023-08-09T18:30:00.000Z",
+      "days": "2",
+      "reason": "Hospital emergency",
+      "status": "Approved",
+      "id": 5
+    },
+    {
+      "staffId": "fd5bb5c4-1589-4fc1-b5d0-b4440605cf99",
+      "name": "John Doe",
+      "dept": "Civil",
+      "fromdate": "2023-08-10T18:30:00.000Z",
+      "todate": "2023-08-10T18:30:00.000Z",
+      "days": "1",
+      "reason": "xyz",
+      "status": "Rejected",
+      "id": 6
+    },
+    {
+      "staffId": "198a809b-2bcc-4636-97cf-17939c75bb76",
+      "name": "user1",
+      "dept": "Computers",
+      "fromdate": "2023-08-06T18:30:00.000Z",
+      "todate": "2023-08-06T18:30:00.000Z",
+      "days": "1",
+      "reason": "family function",
+      "status": "Approved",
+      "id": 7
     }
   ]
 }

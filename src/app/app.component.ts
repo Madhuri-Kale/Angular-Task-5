@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './service/auth.service';
+import { TitleStrategy } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,9 @@ import { AuthService } from './service/auth.service';
 export class AppComponent {
   title = 'Angular-Task-5';
 constructor(private service : AuthService){}
-//   logout(){
-//     this.service.logout();
-//   }
+logout(){
+  this.service.logout();
+}
 
 //   isLoggedIn(){
 //     this.service.isLoggedIn();

@@ -14,13 +14,7 @@ export class AuthService {
   // public loggedUserSub: BehaviorSubject<any>;
   // public loggedUser: Observable<any>;
   constructor(private http: HttpClient) {
-    // this.loggedUserSub = new BehaviorSubject<any>(JSON.parse(localStorage.getItem('id') || '{}'));
-    // this.loggedUser = this.loggedUserSub.asObservable();
   }
-
-  // public get loggedUserValue(): any {
-  //   return this.loggedUserSub.value;
-  // }
 
   getAll(){
     return this.http.get(this.apiUrl);
@@ -54,11 +48,11 @@ export class AuthService {
   }
 
   logout(){
-    return localStorage.removeItem('username')
+    localStorage.removeItem('username')
   }
 
   getUserRole(){
-    return localStorage.getItem('userrole')!=null?localStorage.getItem('userRole'):'';
+    return localStorage.getItem('userrole')!=null?localStorage.getItem('userrole'):'';
   }
   getId(){
     return localStorage.getItem('id')!=null?localStorage.getItem('id'):'';
